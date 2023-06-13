@@ -41,3 +41,7 @@ networks:
 volumes:
   postgres:
   pgadmin:
+
+
+##COMANDS
+#docker compose -f docker-compose.yml up -d start
