@@ -29,4 +29,19 @@ public class UserServiceImpl implements UserService {
     public void delete(UserEntity userEntity) {
         userRepository.delete((userEntity));
     }
+
+    @Override
+    public void save(UserEntity userEntity) {
+        userRepository.save(userEntity);
+    }
+
+    @Override
+    public boolean existByUserName(String username) {
+        return userRepository.existsByUsername(username);
+    }
+
+    @Override
+    public boolean existByEmail(String email) {
+        return userRepository.existsByEmail(email);
+    }
 }

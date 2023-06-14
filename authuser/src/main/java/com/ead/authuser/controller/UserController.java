@@ -1,4 +1,4 @@
-package com.ead.authuser.controllers;
+package com.ead.authuser.controller;
 
 import com.ead.authuser.entity.UserEntity;
 import com.ead.authuser.services.UserService;
@@ -15,7 +15,6 @@ import java.util.UUID;
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/users")
 public class UserController {
-
 
     @Autowired
     UserService userService;
@@ -42,7 +41,7 @@ public class UserController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
         } else {
             userService.delete(userModelOptional.get());
-            return ResponseEntity.status(HttpStatus.OK).body("User deleted succesfully");
+            return ResponseEntity.status(HttpStatus.OK).body("User deleted successfully");
         }
 
     }
